@@ -1,5 +1,5 @@
 // 1. SET THE DATE (April 20, 2026)
-const birthday = new Date(2026, 3, 20, 0, 0, 0).getTime();
+const birthday = new Date(2026, 3, 16, 11, 45, 0).getTime();
 
 const countdownTimer = setInterval(() => {
     const now = new Date().getTime();
@@ -89,4 +89,4 @@ document.querySelectorAll('.fade-in').forEach(section => {
     observer.observe(section);
 });
 
-revealBirthday(); 
+//revealBirthday(); 
