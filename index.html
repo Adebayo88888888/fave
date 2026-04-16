@@ -12,12 +12,18 @@
 
 <body>
 
+    <audio id="bday-music" loop>
+        <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+
     <div id="countdown-screen" class="full-screen">
         <h2 class="poetic-text">Something special is arriving...</h2>
         <div id="timer">00d 00h 00m 00s</div>
     </div>
 
     <div id="birthday-content" class="hidden">
+        <div id="music-toggle" onclick="toggleMusic()">🎵 Play Vibes</div>
+
         <section class="hero">
             <div class="hero-text">
                 <h1 class="fade-in">Happy Birthday, Beautiful</h1>
@@ -30,13 +36,16 @@
         </section>
 
         <section class="gallery">
-            <div class="photo-frame"><img src="assets/gallery1.jpg" alt="Moment 1"></div>
-            <div class="photo-frame"><img src="assets/gallery2.jpg" alt="Moment 2"></div>
-            <div class="photo-frame"><img src="assets/hero.jpg" alt="Moment 3"></div>
+            <div class="photo-frame"><img src="assets/hero.jpeg" alt="Hero"></div>
+            <div class="photo-frame"><img src="assets/img1.jpeg" alt="Moment 1"></div>
+            <div class="photo-frame"><img src="assets/img2.jpeg" alt="Moment 2"></div>
+            <div class="photo-frame"><img src="assets/img3.jpeg" alt="Moment 3"></div>
+            <div class="photo-frame"><img src="assets/img4.jpeg" alt="Moment 4"></div>
+            <div class="photo-frame"><img src="assets/img5.jpeg" alt="Moment 5"></div>
         </section>
 
         <footer>
-            <p>Made with ❤️ from [Your Name]</p>
+            <p>Made with ❤️ by Adebayo</p>
         </footer>
     </div>
 
