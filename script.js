@@ -1,5 +1,5 @@
 // 1. SET THE DATE (April 20, 2026)
-const birthday = new Date(2026, 3, 16, 11, 45, 0).getTime();
+const birthday = new Date(2026, 3, 20, 0, 0, 0).getTime();
 
 const countdownTimer = setInterval(() => {
     const now = new Date().getTime();
@@ -69,10 +69,10 @@ function toggleMusic() {
     const btn = document.getElementById("music-toggle");
     if (music.paused) {
         music.play();
-        btn.innerHTML = "⏸ Pause Vibes";
+        btn.innerHTML = "⏸ Pause music";
     } else {
         music.pause();
-        btn.innerHTML = "🎵 Play Vibes";
+        btn.innerHTML = "🎵 Play music";
     }
 }
 
