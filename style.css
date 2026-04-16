@@ -1,6 +1,7 @@
 :root {
-    --primary: #ff69b4;
-    --white: #ffffff;
+    --primary-pink: #ff69b4;
+    --soft-white: #fffafa;
+    --text-dark: #444;
 }
 
 body,
@@ -8,10 +9,11 @@ html {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #fffafa;
+    background: var(--soft-white);
+    color: var(--text-dark);
+    scroll-behavior: smooth;
 }
 
-/* Screen setups */
 .full-screen {
     height: 100vh;
     display: flex;
@@ -23,18 +25,17 @@ html {
     text-align: center;
 }
 
-.hidden {
-    display: none !important;
-}
-
-/* Timer text */
 #timer {
     font-size: 3.5rem;
     font-weight: 300;
     margin-top: 20px;
 }
 
-/* Birthday Content Styles */
+.hidden {
+    display: none !important;
+}
+
+/* Hero Section */
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/hero.jpeg') no-repeat center center/cover;
@@ -48,50 +49,121 @@ html {
 .hero-text h1 {
     font-family: 'Dancing Script', cursive;
     font-size: 4.5rem;
+    margin: 0;
 }
 
-.poetry-section {
-    padding: 100px 20px;
+/* Letter Section */
+.heartfelt-letter {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.letter-box {
+    max-width: 650px;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     text-align: center;
+    border: 1px solid #ffe4e1;
 }
 
-.quote {
-    font-style: italic;
+.script-font {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.8rem;
+    color: var(--primary-pink);
+}
+
+.letter-text p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.signature {
+    font-family: 'Dancing Script', cursive;
     font-size: 1.8rem;
-    color: var(--primary);
+    margin-top: 20px;
+    color: var(--primary-pink);
 }
 
-/* Masonry Gallery */
+/* Gallery */
+.gallery-container {
+    padding: 40px 20px;
+}
+
 .gallery {
     column-count: 2;
-    column-gap: 20px;
-    padding: 20px;
+    column-gap: 15px;
     max-width: 1000px;
     margin: 0 auto;
 }
 
 .photo-frame {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     break-inside: avoid;
 }
 
 .photo-frame img {
     width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Reason Generator */
+.interactive-zone {
+    padding: 80px 20px;
+    text-align: center;
+    background: white;
+}
+
+#reason-text {
+    font-size: 1.2rem;
+    min-height: 3rem;
+    margin-bottom: 20px;
+    transition: opacity 0.3s ease;
+}
+
+#love-btn {
+    font-size: 2rem;
+    background: none;
+    border: 2px solid var(--primary-pink);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#love-btn:hover {
+    transform: scale(1.1);
+}
+
+/* UI Elements */
 #music-toggle {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: var(--primary);
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary-pink);
     color: white;
-    padding: 12px 25px;
-    border-radius: 50px;
+    padding: 10px 20px;
+    border-radius: 30px;
     cursor: pointer;
     z-index: 1000;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Scroll Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1.2s ease-out;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @media (max-width: 600px) {

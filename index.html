@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For You | April 20</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;600&display=swap"
         rel="stylesheet">
 </head>
 
@@ -22,6 +23,7 @@
     </div>
 
     <div id="birthday-content" class="hidden">
+
         <div id="music-toggle" onclick="toggleMusic()">🎵 Play Vibes</div>
 
         <section class="hero">
@@ -31,21 +33,45 @@
             </div>
         </section>
 
-        <section class="poetry-section">
-            <p class="quote">"In every coordinate of my life, you are the constant."</p>
+        <section class="heartfelt-letter fade-in">
+            <div class="letter-box">
+                <h2 class="script-font">My Prayers & Wishes</h2>
+                <div class="letter-text">
+                    <p>On this 20th of April, I am sending a thousand prayers across the miles to you. I pray that this
+                        new age brings you closer to your wildest dreams and fills your heart with a peace that
+                        surpasses all understanding.</p>
+                    <p>May your smile remain as bright as the morning sun, and may favor follow you in everything you
+                        lay your hands on. I wish for you a year of breakthroughs, laughter that makes your stomach
+                        ache, and the strength to conquer every goal you've set.</p>
+                    <p>You are more than a constant to me; you are a blessing I thank God for every day. Happy Birthday,
+                        my favorite person.</p>
+                </div>
+                <div class="signature">— Adebayo</div>
+            </div>
         </section>
 
-        <section class="gallery">
-            <div class="photo-frame"><img src="assets/hero.jpeg" alt="Hero"></div>
-            <div class="photo-frame"><img src="assets/img1.jpeg" alt="Moment 1"></div>
-            <div class="photo-frame"><img src="assets/img2.jpeg" alt="Moment 2"></div>
-            <div class="photo-frame"><img src="assets/img3.jpeg" alt="Moment 3"></div>
-            <div class="photo-frame"><img src="assets/img4.jpeg" alt="Moment 4"></div>
-            <div class="photo-frame"><img src="assets/img5.jpeg" alt="Moment 5"></div>
+        <section class="gallery-container fade-in">
+            <h2 class="script-font text-center">Moments Captured</h2>
+            <div class="gallery">
+                <div class="photo-frame"><img src="assets/hero.jpeg" alt="Hero"></div>
+                <div class="photo-frame"><img src="assets/img1.jpeg" alt="Moment 1"></div>
+                <div class="photo-frame"><img src="assets/img2.jpeg" alt="Moment 2"></div>
+                <div class="photo-frame"><img src="assets/img3.jpeg" alt="Moment 3"></div>
+                <div class="photo-frame"><img src="assets/img4.jpeg" alt="Moment 4"></div>
+                <div class="photo-frame"><img src="assets/img5.jpeg" alt="Moment 5"></div>
+            </div>
+        </section>
+
+        <section class="interactive-zone fade-in">
+            <div class="generator-box">
+                <h3 class="script-font">A Little Reminder...</h3>
+                <div id="reason-text">Click the heart to see why I adore you</div>
+                <button id="love-btn" onclick="generateReason()">❤️</button>
+            </div>
         </section>
 
         <footer>
-            <p>Made with ❤️ by Remy</p>
+            <p>Made with ❤️ for You | 2026</p>
         </footer>
     </div>
 
