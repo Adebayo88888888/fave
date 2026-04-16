@@ -1,27 +1,32 @@
-// Target: April 20, 2026. Note: Month 3 is April.
-const bday = new Date(2026, 3, 20, 0, 0, 0).getTime();
+// Target Date: April 20, 2026 (00:00:00)
+const birthday = new Date(2026, 3, 20, 0, 0, 0).getTime();
 
-const timerUpdate = setInterval(() => {
+const countdown = setInterval(function () {
     const now = new Date().getTime();
-    const diff = bday - now;
+    const distance = birthday - now;
 
-    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const s = Math.floor((diff % (1000 * 60)) / 1000);
+    // Time calculations
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("timer").innerHTML = `${d}d ${h}h ${m}m ${s}s`;
+    // Display the result
+    document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
 
-    if (diff <= 0) {
-        clearInterval(timerUpdate);
-        reveal();
+    // If the countdown is finished, reveal the site
+    if (distance < 0) {
+        clearInterval(countdown);
+        revealBirthday();
     }
 }, 1000);
 
-function reveal() {
+function revealBirthday() {
     document.getElementById("countdown-screen").style.display = "none";
     document.getElementById("birthday-content").classList.remove("hidden");
 
+    // Confetti
     confetti({
         particleCount: 150,
         spread: 70,
@@ -42,5 +47,5 @@ function toggleMusic() {
     }
 }
 
-// TEST: Uncomment to see content immediately
-reveal();
+// To test right now, uncomment the line below:
+// revealBirthday();
