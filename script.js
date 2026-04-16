@@ -89,4 +89,4 @@ document.querySelectorAll('.fade-in').forEach(section => {
     observer.observe(section);
 });
 
-//revealBirthday(); 
+revealBirthday(); 
