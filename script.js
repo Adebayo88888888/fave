@@ -48,4 +48,4 @@ function toggleMusic() {
 }
 
 // To test right now, uncomment the line below:
-// revealBirthday();
+revealBirthday();
