@@ -41,6 +41,7 @@ const reasons = [
     "How you make the distance btwn us feel like nothing when we talk.",
     "The way you support and stand by me.",
     "You have the kindest heart I've ever known.",
+    "You take care of me like your baby that I am.",
     "The way you treat people with utmost grace.",
     "The way you stand 'tall' when walking with me.😉",
     "I love how I can be 100% myself around you.",
