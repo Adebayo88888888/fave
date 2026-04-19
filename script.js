@@ -32,26 +32,33 @@ function revealBirthday() {
     });
 }
 
-// 3. REASON GENERATOR LOGIC
+// 3. REASON GENERATOR LOGIC (SEQUENTIAL)
+let currentIndex = 0; // Starts at the first reason
+
 const reasons = [
     "Your laugh is my absolute favorite sound in the world.",
     "The way you handle challenges with so much grace and strength.",
     "How you make the distance btwn us feel like nothing when we talk.",
     "The way you support and stand by me.",
     "You have the kindest heart I've ever known.",
-    "The way you treat your own with utmost grace.",
+    "The way you treat people with utmost grace.",
     "The way you stand 'tall' when walking with me.😉",
     "I love how I can be 100% myself around you.",
-    "Because you're you—and that's more than enough for me."
+    "Because you're you, and that's more than enough for me."
 ];
 
 function generateReason() {
     const textElement = document.getElementById("reason-text");
-    const randomReason = reasons[Math.floor(Math.random() * reasons.length)];
+
     textElement.style.opacity = 0;
 
     setTimeout(() => {
-        textElement.innerHTML = randomReason;
+        // Set text to current index
+        textElement.innerHTML = reasons[currentIndex];
+
+        // Move to next index, or back to 0 if at the end
+        currentIndex = (currentIndex + 1) % reasons.length;
+
         textElement.style.opacity = 1;
         confetti({
             particleCount: 40,
@@ -88,4 +95,4 @@ document.querySelectorAll('.fade-in').forEach(section => {
     observer.observe(section);
 });
 
-revealBirthday(); 
+// revealBirthday();
