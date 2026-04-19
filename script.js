@@ -36,12 +36,11 @@ function revealBirthday() {
 const reasons = [
     "Your laugh is my absolute favorite sound in the world.",
     "The way you handle challenges with so much grace and strength.",
-    "Your deep love for murder mysteries—it's so uniquely you.",
-    "How you make 500 miles feel like nothing when we talk.",
-    "The way you support my dreams without hesitation.",
+    "How you make the distance btwn us feel like nothing when we talk.",
+    "The way you support and stand by me.",
     "You have the kindest heart I've ever known.",
-    "The way your eyes sparkle when you're genuinely happy.",
-    "You're my constant in a world full of variables.",
+    "The way you treat your own with utmost grace.",
+    "The way you stand 'tall' when walking with me.😉",
     "I love how I can be 100% myself around you.",
     "Because you're you—and that's more than enough for me."
 ];
